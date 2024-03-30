@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundcolor"
+    tools:context=".SelectGameFragment">
+
+
+    <TextView
+        android:id="@+id/selectgametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto"
+        android:text="Select Game"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/sutarnselimg"
+        android:layout_width="79dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/planet2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/selectline"
+        android:layout_width="150dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/selectgameline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sutarnselimg"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectgametxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+
+        android:id="@+id/robotimg"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/selectgamerobotback"
+        android:baselineAlignBottom="true"
+        android:padding="20dp"
+        android:src="@drawable/robot_02_icon"
+        app:layout_constraintBottom_toTopOf="@+id/twoplayerbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectline"
+        app:layout_constraintVertical_bias="0.067" />
+
+
+    <Button
+        android:id="@+id/singleplayerbtn"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/robobtnback"
+        android:fontFamily="@font/roboto"
+        android:text="Single Player"
+        android:textColor="@color/white"
+        app:backgroundTint="#F24F1C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="@+id/robotimg"
+        app:layout_constraintTop_toBottomOf="@+id/selectline" />
+
+    <ImageView
+        android:id="@+id/twoplayerimg"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/twoplayerback"
+        android:padding="25dp"
+        android:src="@drawable/play__1_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/robotimg" />
+
+    <Button
+        android:id="@+id/twoplayerbtn"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/twoplayerbtnback"
+        android:fontFamily="@font/roboto"
+        android:text="Two Player"
+        android:textColor="@color/white"
+        app:backgroundTint="#7213EB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="@+id/twoplayerimg"
+        app:layout_constraintTop_toBottomOf="@+id/singleplayerbtn" />
+
+    <ImageView
+        android:id="@+id/store"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/thirdplayerback"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="30dp"
+        android:src="@drawable/store"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoplayerimg" />
+
+    <Button
+        android:id="@+id/marketbtn"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="108dp"
+        android:background="@drawable/thirdplayerbtnback"
+        android:fontFamily="@font/roboto"
+        android:text="Market Place"
+        android:textColor="@color/white"
+        app:backgroundTint="#451CBB"
+        app:layout_constraintBottom_toBottomOf="@+id/store"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/store"
+        app:layout_constraintTop_toTopOf="@+id/store"
+        app:layout_constraintVertical_bias="0.451" />
+
+    <ImageView
+        android:id="@+id/consolehand"
+        android:layout_width="103dp"
+        android:layout_height="85dp"
+        android:src="@drawable/consolehand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/round_dark_tic_table"
+        android:padding="1dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sutarnselimg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

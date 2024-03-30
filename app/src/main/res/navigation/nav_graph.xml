@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homepage">
+
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.agaafar.tictactoe.Homepage"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/action_homepage_to_selectGameFragment"
+            app:destination="@id/selectGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.agaafar.tictactoe.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="btnnavigated"
+            app:argType="integer" />
+        <argument
+            android:name="currentskin"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectGameFragment"
+        android:name="com.agaafar.tictactoe.SelectGameFragment"
+        android:label="fragment_select_game"
+        tools:layout="@layout/fragment_select_game" >
+        <action
+            android:id="@+id/action_selectGameFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_selectGameFragment_to_marketPlaceFragment"
+            app:destination="@id/marketPlaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marketPlaceFragment"
+        android:name="com.agaafar.tictactoe.MarketPlaceFragment"
+        android:label="fragment_market_place"
+        tools:layout="@layout/fragment_market_place" >
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="currentskin"
+            app:argType="integer" />
+        <argument
+            android:name="skins"
+            app:argType="integer[]" />
+    </fragment>
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="145dp"
+    android:layout_height="141dp"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="32dp"
+    android:layout_marginLeft="20dp"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    cardview:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:id="@+id/backlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/thirdplayerbtnback"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/itemimg"
+            android:layout_width="103dp"
+            android:layout_height="67dp"
+            android:padding="10dp"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:id="@+id/buybtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="9dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#4C9BD4"
+            android:text="0/3"
+            android:textColor="@color/white"
+            app:icon="@drawable/advertising__4_"
+            app:iconTint="@color/white"
+            cardview:cornerRadius="20dp" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

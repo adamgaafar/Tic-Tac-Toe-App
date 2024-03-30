@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id "androidx.navigation.safeargs.kotlin"
+    id "kotlin-kapt"
+    id 'kotlinx-serialization'
+    id 'kotlin-parcelize'
+
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.agaafar.tictactoe"
+        minSdk 19
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            // your project's release build type.
+            minifyEnabled true
+
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    buildToolsVersion '34.0.0'
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    def nav_version = '2.7.7'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    // Room components
+    implementation 'androidx.room:room-runtime:2.6.1'
+    kapt 'androidx.room:room-compiler:2.6.1'
+    implementation 'androidx.room:room-ktx:2.6.1'
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0'
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0'
+
+    def lifecycle_version = '2.7.0'
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    //json encoder
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3'
+
+
+
+    //gms
+    implementation 'com.google.android.gms:play-services-ads:23.0.0'
+
+    //dex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
